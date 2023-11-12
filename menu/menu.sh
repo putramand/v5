@@ -1,4 +1,5 @@
  #!/bin/bash
+
 BURIQ () {
     curl -sS https://raw.githubusercontent.com/putramand/permission/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
@@ -55,6 +56,7 @@ Exp="\e[36mExpired\033[0m"
 else
 Exp=$(curl -sS https://raw.githubusercontent.com/putramand/permission/main/ipmini | grep $MYIP | awk '{print $3}')
 fi
+
 # =========================================
 vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
 let vla=$vlx/2
@@ -252,7 +254,7 @@ export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan} │                  ${BIWhite}${UWhite}PUTRA VIP TUNNEL${NC}"
+echo -e "${BICyan} │                  ${BIWhite}${UWhite}PUTRA VIP${NC}"
 echo -e "${BICyan} │"
 echo -e "${BICyan} │  ${BICyan}OS        :  ${BIYellow}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )${NC}"
 echo -e "${BICyan} │  ${BICyan}CPU       :  ${BIYellow}$cpu_usage${NC}"
@@ -262,8 +264,8 @@ echo -e "${BICyan} │  ${BICyan}RAM       :  ${BIYellow}$totalram MB${NC}"
 echo -e "${BICyan} │  ${BICyan}SWAP RAM  :  ${BIYellow}$uram / $tram MB${NC}"
 echo -e "${BICyan} │  ${BICyan}IP-VPS    :  ${BIYellow}$IPVPS${NC}"
 echo -e "${BICyan} │  ${BICyan}REBOOT    :  ${BIYellow}00:00 ( Jam 12 malam )${NC}"
-echo -e "${BICyan} │  ${BICyan}WHATSAP   :  ${BIYellow}081558306604${NC}"
-echo -e "${BICyan} │  ${BICyan}DEVELOVER :  ${BIYellow} Aliputravip${NC}"
+echo -e "${BICyan} │  ${BICyan}WHATSAP   :  ${BIYellow}081558306604$${NC}"
+echo -e "${BICyan} │  ${BICyan}DEVELOVER :  ${BIYellow}Aliputravip${NC}"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}" 
 echo -e "${BICyan} │  ${BIYellow}SSH         VMESS           VLESS          TROJAN $NC" 
@@ -280,13 +282,25 @@ echo -e "${BICyan} │  ${BICyan}[${BIWhite}05${BICyan}] SETING  ${BICyan}[${BIY
 echo -e "${BICyan} │  ${BICyan}[${BIWhite}06${BICyan}] TRIALL  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}13${BICyan}] UNLOCK SSH      ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan} │${NC}"
 echo -e "${BICyan} │  ${BICyan}[${BIWhite}07${BICyan}] BACKUP  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}14${BICyan}] UPDATE SCRIPT   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan} │${NC}"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
+DATE=$(date +'%d %B %Y')
+datediff() {
+    d1=$(date -d "$1" +%s)
+    d2=$(date -d "$2" +%s)
+    echo -e "        ${BICyan}│$NC Expiry In     : $(( (d1 - d2) / 86400 )) Days $NC"
+}
+mai="datediff "$Exp" "$DATE""
 echo -e "        ${BICyan}┌─────────────────────────────────────┐${NC}"
-echo -e "        ${BICyan}│$NC Version       : Libev Lts 2.7.9"
-echo -e "        ${BICyan}│$NC User          : $Name "
-echo -e "        ${BICyan}│$NC Expiry In     : $Exp$ "
+echo -e "        ${BICyan}│$NC Version       : $(cat /opt/.ver) Last Update ${NC}"
+echo -e "        ${BICyan}│$NC ${GREEN}User          :\033[1;36m $Name \e[0m"
+if [ $exp \< 1000 ];
+then
+echo -e "          $BICyan│$NC License      : ${GREEN}$sisa_hari$NC Days Tersisa $NC"
+else
+    datediff "$Exp" "$DATE"
+fi;
 echo -e "        ${BICyan}└─────────────────────────────────────┘${NC}"
 echo
-read -p "[ 1 / 14 ] >>>> " opt
+read -p " Select menu : " opt
 echo -e ""
 case $opt in
 1) clear ; menu-ssh ;;
