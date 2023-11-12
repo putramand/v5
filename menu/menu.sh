@@ -264,8 +264,8 @@ echo -e "${BICyan} │  ${BICyan}RAM       :  ${BIYellow}$totalram MB${NC}"
 echo -e "${BICyan} │  ${BICyan}SWAP RAM  :  ${BIYellow}$uram / $tram MB${NC}"
 echo -e "${BICyan} │  ${BICyan}IP-VPS    :  ${BIYellow}$IPVPS${NC}"
 echo -e "${BICyan} │  ${BICyan}REBOOT    :  ${BIYellow}00:00 ( Jam 12 malam )${NC}"
-echo -e "${BICyan} │  ${BICyan}WHATSAP   :  ${BIYellow}085955333616${NC}"
-echo -e "${BICyan} │  ${BICyan}DEVELOVER :  ${BIYellow}BRINGAS - TUNNELING${NC}"
+echo -e "${BICyan} │  ${BICyan}WHATSAP   :  ${BIYellow}+62 815-5830-6604${NC}"
+echo -e "${BICyan} │  ${BICyan}DEVELOVER :  ${BIYellow}Aliputravip${NC}"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}" 
 echo -e "${BICyan} │  ${BIYellow}SSH         VMESS           VLESS          TROJAN $NC" 
@@ -292,7 +292,7 @@ mai="datediff "$Exp" "$DATE""
 echo -e "        ${BICyan}┌─────────────────────────────────────┐${NC}"
 echo -e "        ${BICyan}│$NC Version       : $(cat /opt/.ver) Last Update ${NC}"
 echo -e "        ${BICyan}│$NC ${GREEN}User          :\033[1;36m $Name \e[0m"
-if [ $exp \< 1000 ];
+if [ $exp \ 1000 ]
 then
 echo -e "          $BICyan│$NC License      : ${GREEN}$sisa_hari$NC Days Tersisa $NC"
 else
