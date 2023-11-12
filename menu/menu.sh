@@ -292,9 +292,9 @@ mai="datediff "$Exp" "$DATE""
 echo -e "        ${BICyan}┌─────────────────────────────────────┐${NC}"
 echo -e "        ${BICyan}│$NC Version       : $(cat /opt/.ver) Last Update ${NC}"
 echo -e "        ${BICyan}│$NC ${GREEN}User          :\033[1;36m $Name \e[0m"
-if [ $exp \ 1000 ]
+if [ $exp \< 1000 ];
 then
-echo -e "          $BICyan│$NC License      : $exp2 Days Tersisa $NC"
+echo -e "          $BICyan│$NC License      : $exp Days Tersisa $NC"
 else
     datediff "$Exp" "$DATE"
 fi;
