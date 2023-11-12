@@ -1,6 +1,6 @@
  #!/bin/bash
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/putramand/permission/main/ipimini > /root/tmp
+    curl -sS https://raw.githubusercontent.com/putramand/permission/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -18,7 +18,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/putramand/permission/main/ipimini | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/putramand/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -35,7 +35,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/putramand/permission/main/ipimini | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/putramand/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -281,9 +281,9 @@ echo -e "${BICyan} │  ${BICyan}[${BIWhite}06${BICyan}] TRIALL  ${BICyan}[${BIY
 echo -e "${BICyan} │  ${BICyan}[${BIWhite}07${BICyan}] BACKUP  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}14${BICyan}] UPDATE SCRIPT   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan} │${NC}"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 echo -e "        ${BICyan}┌─────────────────────────────────────┐${NC}"
-echo -e "        ${BICyan}│$NC Version       : Libev Lts 2.7.9 ${NC}"
-echo -e "        ${BICyan}│$NC User          : $Name"
-echo -e "        ${BICyan}│$NC Expiry In     : $Exp$NC"
+echo -e "        ${BICyan}│$NC Version       : Libev Lts 2.7.9"
+echo -e "        ${BICyan}│$NC User          : $Name "
+echo -e "        ${BICyan}│$NC Expiry In     : $Exp$ "
 echo -e "        ${BICyan}└─────────────────────────────────────┘${NC}"
 echo
 read -p "[ 1 / 14 ] >>>> " opt
