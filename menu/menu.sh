@@ -284,8 +284,8 @@ echo -e "${BICyan} │  ${BICyan}[${BIWhite}07${BICyan}] BACKUP  ${BICyan}[${BIY
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 echo -e "        ${BICyan}┌─────────────────────────────────────┐${NC}"
 echo -e "        ${BICyan}│$NC Version       : Libev Lts 2.7.9 ${NC}"
-echo -e "        ${BICyan}│$NC ${GREEN}User  : $Name"
-echo -e "        ${BICyan}│$NC Expiry In     : $exp2 Days $NC"
+echo -e "        ${BICyan}│$NC ${GREEN}User  : $Name $user"
+echo -e "        ${BICyan}│$NC Expiry In     : $Exp Days $NC"
 echo -e "        ${BICyan}└─────────────────────────────────────┘${NC}"
 echo
 read -p "[ 1 / 14 ] >>>> " opt
