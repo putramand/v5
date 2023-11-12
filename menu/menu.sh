@@ -291,7 +291,7 @@ mai="datediff "$Exp" "$DATE""
 echo -e "        ${BICyan}┌─────────────────────────────────────┐${NC}"
 echo -e "        ${BICyan}│$NC Version       : $(cat /opt/.ver) Last Update ${NC}"
 echo -e "        ${BICyan}│$NC Expiry In     : $(( (d1 - d2) / 86400 )) Days $NC"
-echo -e "        ${BICyan}│$NC User          : $(curl -sS https://raw.githubusercontent.com/putramand/permission/main/ipmini | grep $MYIP | awk '{print $2}')"
+echo -e "        ${BICyan}│$NC User          : $(cat /etc/.$Name.ini)
 echo -e "        ${BICyan}└─────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
