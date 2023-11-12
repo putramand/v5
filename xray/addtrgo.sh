@@ -35,7 +35,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Limit ip (DEVICE) : " Limit
 read -p "Limit bw (GB) : " bw
-read -p "Limit quota (GB) : quota
+read -p "Limit quota (GB) : " quota
 read -p "Expired (Days) : " masaaktif
 sed -i '/"'""$uuid""'"$/a\,"'""$user""'"' /etc/trojan-go/config.json
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
@@ -56,6 +56,9 @@ echo -e "Key        : ${uuid}" | tee -a /etc/log-create-user.log
 echo -e "Encryption : none" | tee -a /etc/log-create-user.log
 echo -e "Path       : /trojango" | tee -a /etc/log-create-user.log
 echo -e "Created    : $hariini" | tee -a /etc/log-create-user.log
+echo -e "Limit ip   : $Limit"
+echo -e "Limit bw   : $bw"
+echo -e "Limit quota: $quota"
 echo -e "Expired    : $exp" | tee -a /etc/log-create-user.log
 echo -e "========================="
 echo -e "Link TrGo  		: ${link}" | tee -a /etc/log-create-user.log
