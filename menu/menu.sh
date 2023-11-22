@@ -254,12 +254,13 @@ export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan} │                  ${BIWhite}${UIWhite}     
-           _   ______     ____  ___  _________ 
-          / | / / __ \   / __ \/   |/_  __/   |
-         /  |/ / / / /  / / / / /| | / / / /| |
-        / /|  / /_/ /  / /_/ / ___ |/ / / ___ |
-       /_/ |_/\____/  /_____/_/  |_/_/ /_/  | __${NC}"
+echo -e "${BICyan} │                  ${BIWhite}${UIWhite}            
+              _                _           _     _______               _ 
+             | |              | |         | |   |__   __|             | |
+             | | ___ _ __ ___ | |__   ___ | |_     | |_   _ _ __   ___| |
+         _   | |/ _ \ '_ ` _ \| '_ \ / _ \| __|    | | | | | '_ \ / _ \ |
+        | |__| |  __/ | | | | | |_) | (_) | |_     | | |_| | | | |  __/ |
+         \____/ \___|_| |_| |_|_.__/ \___/ \__|    |_|\__,_|_| |_|\___|_ _l_${NC}"
 echo -e "${BICyan} │"
 echo -e "${BICyan} │  ${BICyan}OS        :  ${BIYellow}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )${NC}"
 echo -e "${BICyan} │  ${BICyan}CPU       :  ${BIYellow}$cpu_usage${NC}"
