@@ -261,7 +261,7 @@ echo -e "$green | |  __  ___| |_  |  \| | |  | | |  | | /  \  | |  /  \   $NC"
 echo -e "$green | | |_ |/ _ \ __| | . ` | |  | | |  | |/ /\ \ | | / /\ \  $NC"
 echo -e "$green | |__| |  __/ |_  | |\  | |__| | |__| / ____ \| |/ ____ \ $NC"
 echo -e "$green\_____|\___|\__| |_| \_|\____/|_____/_/    \_\_/_/    \_\$NC"
-
+echo -e
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                  ${BIWhite}${UWhite} JEMBOT TUNNELING${NC}"
 echo -e "${BICyan} │"
