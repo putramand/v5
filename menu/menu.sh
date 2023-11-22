@@ -253,7 +253,7 @@ export sem=$( curl -s https://raw.githubusercontent.com/putramand/v5/main/versio
 export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
-
+echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo ""
 echo -e "$green   _____      _     _   _  ____  _____       _______       $NC"
 echo -e "$green  / ____|    | |   | \ | |/ __ \|  __ \   /\|__   __|/\    $NC"
@@ -262,7 +262,6 @@ echo -e "$green | | |_ |/ _ \ __| | . ` | |  | | |  | |/ /\ \ | | / /\ \  $NC"
 echo -e "$green | |__| |  __/ |_  | |\  | |__| | |__| / ____ \| |/ ____ \ $NC"
 echo -e "$green\_____|\___|\__| |_| \_|\____/|_____/_/    \_\_/_/    \_\$NC"
 echo -e
-echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                  ${BIWhite}${UWhite} JEMBOT TUNNELING${NC}"
 echo -e "${BICyan} │"
 echo -e "${BICyan} │  ${BICyan}OS        :  ${BIYellow}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )${NC}"
