@@ -254,8 +254,8 @@ export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan} │                  ${BIYellow}${BIYellow}     
-            _   ______     ____  ___  _________ 
+echo -e "${BICyan} │                  ${BIWhite}${UIWhite}     
+           _   ______     ____  ___  _________ 
           / | / / __ \   / __ \/   |/_  __/   |
          /  |/ / / / /  / / / / /| | / / / /| |
         / /|  / /_/ /  / /_/ / ___ |/ / / ___ |
