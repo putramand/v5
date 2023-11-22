@@ -254,12 +254,6 @@ export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-   _____      _     _   _  ____  _____       _______       
-  / ____|    | |   | \ | |/ __ \|  __ \   /\|__   __|/\    
- | |  __  ___| |_  |  \| | |  | | |  | | /  \  | |  /  \   
- | | |_ |/ _ \ __| | . ` | |  | | |  | |/ /\ \ | | / /\ \  
- | |__| |  __/ |_  | |\  | |__| | |__| / ____ \| |/ ____ \ 
- \_____|\___|\__| |_| \_|\____/|_____/_/    \_\_/_/    \_\
 echo -e "${BICyan} │                  ${BIWhite}${UWhite} JEMBOT TUNNELING${NC}"
 echo -e "${BICyan} │"
 echo -e "${BICyan} │  ${BICyan}OS        :  ${BIYellow}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )${NC}"
