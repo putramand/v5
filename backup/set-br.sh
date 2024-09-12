@@ -43,10 +43,9 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/Bringas-tunnel/v5/main/backup/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/Bringas-tunnel/v5/main/backup/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/Bringas-tunnel/v5/main/backup/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/Bringas-tunnel/v5/main/backup/strt.sh"
+wget -O backup "https://${Server_URL}/backup.sh"
+wget -O restore "https://${Server_URL}/restore.sh"
+wget -O cleaner "https://${Server_URL}/logcleaner.sh"
 wget -O limitspeed "https://raw.githubusercontent.com/Bringas-tunnel/v5/main/backup/limitspeed.sh"
 chmod +x autobackup
 chmod +x backup
