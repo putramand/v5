@@ -16,7 +16,8 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 
 apt install rclone -y
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/Bringas-tunnel/v5/main/backup/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://${Server_URL}/rclone.conf"
+git clone  https://github.com/MrMan21/wondershaper.git
 #Install Wondershaper
 cd /bin
 git clone  https://github.com/magnific0/wondershaper.git
