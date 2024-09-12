@@ -20,7 +20,7 @@ wget -O /root/.config/rclone/rclone.conf "https://${Server_URL}/rclone.conf"
 git clone  https://github.com/MrMan21/wondershaper.git
 #Install Wondershaper
 cd /bin
-git clone  https://github.com/magnific0/wondershaper.git
+git clone  https://github.com/MrMan21/wondershaper.git
 cd wondershaper
 sudo make install
 cd
