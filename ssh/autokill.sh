@@ -45,7 +45,7 @@ case $AutoKill in
                 echo -e "======================================"
                 echo -e ""
                 echo -e "      Allowed MultiLogin : $max"
-                echo -e "      AutoKill Every     : 5 Minutes"      
+                echo -e "      AutoKill Every     : 1 Minutes"      
                 echo -e ""
                 echo -e "======================================"                                                                                                                                 
                 service cron restart >/dev/null 2>&1
