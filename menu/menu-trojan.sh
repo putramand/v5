@@ -126,7 +126,7 @@ case $opt in
 2) clear ; trialtrojan ;;
 3) clear ; renew-tr ;;
 4) clear ; del-tr ;;
-5) clear ; cek-trojan ;;
+5) clear ; cek-tr ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo "Boh salah tekan, Sayang kedak Babi" ; sleep 1 ; menu-trojan ;;
